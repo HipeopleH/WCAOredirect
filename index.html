@@ -1,1 +1,254 @@
-hi
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting... </title>
+    <meta http-equiv="refresh" content="3; url=https://whatcheatsareonline.qd.je">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        :root {
+            --bg: #1a1d1f;
+            --card: #23282b;
+            --border: #333a3d;
+            --border-soft: #2a3134;
+            --text: #e7e9e9;
+            --muted: #888f91;
+            --muted-2: #6a7275;
+            --green: #35d16f;
+            --red: #ff4545;
+            --gray: #888f91;
+        }
+        html { background: var(--bg); }
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: Arial, Helvetica, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 40px 32px;
+            animation: fadeIn 0.3s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.96); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .logo {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 24px;
+        }
+        .logo .white { color: #ffffff; }
+        .logo .green { color: var(--green); }
+        .logo .red { color: var(--red); }
+        .logo .gray { color: var(--gray); }
+        .spinner {
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            border: 3px solid var(--border);
+            border-top: 3px solid var(--green);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        h1 {
+            font-size: 22px;
+            margin: 0 0 8px;
+            font-weight: 600;
+        }
+        p {
+            color: var(--muted);
+            font-size: 14px;
+            margin: 0 0 6px;
+            line-height: 1.6;
+        }
+        .url-display {
+            background: #111516;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 10px 14px;
+            margin: 16px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            word-break: break-all;
+            text-align: left;
+        }
+        .url-display .url-text {
+            flex: 1;
+            min-width: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .copy-btn {
+            background: #1d2223;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            color: #aaa;
+            padding: 4px 10px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            transition: 0.12s;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1;
+            flex-shrink: 0;
+        }
+        .copy-btn:hover {
+            background: #272c2e;
+            color: #ddd;
+            border-color: #363c3e;
+        }
+        .copy-btn svg {
+            width: 13px;
+            height: 13px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            flex-shrink: 0;
+        }
+        .copy-btn.copied {
+            background: var(--green);
+            color: #0b0d0e;
+            border-color: var(--green);
+        }
+        .click-here {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 10px 32px;
+            background: var(--green);
+            color: #0b0d0e;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: opacity 0.12s;
+        }
+        .click-here:hover {
+            opacity: 0.85;
+        }
+        .sub {
+            font-size: 12px;
+            color: var(--muted-2);
+            margin-top: 16px;
+        }
+        .sub a {
+            color: var(--muted);
+            text-decoration: none;
+        }
+        .sub a:hover {
+            color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo">
+            <span class="white">wcao</span><span class="gray">.qd.je</span>
+        </div>
+
+        <div class="spinner"></div>
+        <h1>Redirecting...</h1>
+        <p>Taking you to the main site.</p>
+
+        <div class="url-display">
+            <span class="url-text" id="urlText">https://whatcheatsareonline.qd.je</span>
+            <button class="copy-btn" id="copyBtn" onclick="copyUrl()">
+                <svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                Copy
+            </button>
+        </div>
+
+        <a href="https://whatcheatsareonline.qd.je" class="click-here">Click here if you aren't redirected →</a>
+
+        <p class="sub">Auto-redirecting in <span id="countdown">3</span>s</p>
+    </div>
+
+    <script>
+        const targetUrl = "https://whatcheatsareonline.qd.je";
+        let seconds = 3;
+
+        // Countdown
+        const countdownEl = document.getElementById('countdown');
+        const interval = setInterval(() => {
+            seconds--;
+            countdownEl.textContent = seconds;
+            if (seconds <= 0) {
+                clearInterval(interval);
+                window.location.href = targetUrl;
+            }
+        }, 1000);
+
+        function copyUrl() {
+            const btn = document.getElementById('copyBtn');
+            navigator.clipboard.writeText(targetUrl).then(() => {
+                btn.classList.add('copied');
+                btn.innerHTML = `
+                    <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                    Copied!
+                `;
+                setTimeout(() => {
+                    btn.classList.remove('copied');
+                    btn.innerHTML = `
+                        <svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                        Copy
+                    `;
+                }, 2000);
+            }).catch(() => {
+                // Fallback
+                const range = document.createRange();
+                range.selectNode(document.getElementById('urlText'));
+                window.getSelection().removeAllRanges();
+                window.getSelection().addRange(range);
+                document.execCommand('copy');
+                window.getSelection().removeAllRanges();
+                btn.classList.add('copied');
+                btn.innerHTML = `
+                    <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                    Copied!
+                `;
+                setTimeout(() => {
+                    btn.classList.remove('copied');
+                    btn.innerHTML = `
+                        <svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                        Copy
+                    `;
+                }, 2000);
+            });
+        }
+    </script>
+
+</body>
+</html>
